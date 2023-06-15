@@ -3,6 +3,8 @@
     --light-color: #141922;
     --dark-color: #080b12;
     --bar-color: #282828;
+    --line-nav-color: #adff2f;
+    --standard-padding: 15px;
 }
 
 * {
@@ -23,9 +25,18 @@ section {
     flex-direction: column;
 }
 
+/* Stili testo */
 .subtitle {
-
+    color: var(--nav-text-color);
 }
+/******************/
+
+/* Stili base link */
+a {
+    color: var(--nav-text-color);
+    text-decoration: none;
+}
+/******************/
 
 /*************************************************************/
 /* BOX SUPERIORE */
@@ -70,7 +81,7 @@ main {
 .cards-box {
     display: flex;
     flex-flow: row wrap;
-    gap: 15px;
+    gap: var(--standard-padding);
 }
 
 .card {
@@ -91,8 +102,40 @@ main {
 }
 
 .card-title {
-
+    font-weight: bold;
 }
+/******************/
+/* Menù sottosezioni */
+.subsection-menu {
+}
+
+.subsection-menu ul {
+    display: flex;
+    list-style: none;
+    gap: var(--standard-padding);
+    justify-content: center;
+}
+
+.subsection-menu a {
+    text-transform: uppercase;
+}
+
+.subsection-menu > ul > li:first-of-type {
+    position: relative;
+}
+
+.subsection-menu > ul > li:first-of-type::after {
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--line-nav-color);
+    height: 3px;
+    width: 40px;
+    content: "";
+}
+/******************/
+
 /*************************************************************/
 /* BOX INFERIORE */
 /*************************************************************/
