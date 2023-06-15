@@ -18,10 +18,13 @@ body {
     flex-direction: column;
 }
 
-body > *, .global-container > * {
-    min-width: 100px;
-    min-height: 100px;
-    border: 2px dotted red;
+section {
+    display: flex;
+    flex-direction: column;
+}
+
+.subtitle {
+
 }
 
 /*************************************************************/
@@ -60,10 +63,36 @@ main {
     flex-grow: 1;
     overflow-y: auto;
     overflow-x: hidden;
-    display: flex;
     background-color: rgb(231, 233, 130);
 }
 
+/* Sezioni con Card */
+.cards-box {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 15px;
+}
+
+.card {
+    background-color: lightseagreen;
+    max-width: calc(100% / 6 - 15px);
+}
+
+.card img {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.card-round img {
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: center;
+}
+
+.card-title {
+
+}
 /*************************************************************/
 /* BOX INFERIORE */
 /*************************************************************/
