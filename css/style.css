@@ -4,7 +4,7 @@
     --dark-color: #080b12;
     --bar-color: #282828;
     --line-nav-color: #adff2f;
-    --standard-padding: 15px;
+    --standard-padding: 1rem;
 }
 
 * {
@@ -28,6 +28,14 @@ section {
 /* Stili testo */
 .subtitle {
     color: var(--nav-text-color);
+}
+
+i {
+    color: var(--nav-text-color);
+}
+
+ul {
+    list-style: none;
 }
 /******************/
 /* Stili base link */
@@ -61,11 +69,103 @@ a {
 /* NAV */
 nav {
     width: 200px;
-    overflow: auto;
+    overflow: hidden;
     flex-shrink: 0;
     background-color: lightgoldenrodyellow;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: var(--standard-padding);
+}
+/* Sezione superiore */
+.nav-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: calc(var(--standard-padding) / 2);
+    padding-top: var(--standard-padding);
 }
 
+.nav-logo img {
+    max-width: 50%;
+    object-fit: cover;
+}
+
+.nav-menu {
+    padding: 1.5rem 0 0 1rem;
+}
+
+.nav-menu i {
+    padding-right: .5rem;
+    padding-left: .5rem;
+}
+
+.nav-menu-selected {
+    position: relative;
+}
+
+.nav-menu-selected::after {
+    position: absolute;
+    left: -1rem;
+    background-color: var(--line-nav-color);
+    height: calc(100% - .8rem);
+    width: 3px;
+    content: "";
+}
+
+.nav-menu li {
+    padding-bottom: .8rem;
+    color: var(--nav-text-color);
+}
+
+.nav-menu > h3:first-of-type {
+    text-transform: uppercase;
+}
+
+.nav-menu-new-playlist {
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu-new-playlist > i {
+    font-size: 3rem;
+}
+/******************/
+/* Sezione inferiore */
+.profile-box p {
+    position: relative;
+    padding-bottom: .5rem;
+}
+
+.profile-box > p::after {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--nav-text-color);
+    height: 3px;
+    width: 95%;
+    content: "";
+}
+
+.profile-box > div {
+    display: flex;
+    align-items: center;
+    padding-top: .5rem;
+}
+
+.profile-box > div > img {
+    max-width: 15%;
+    object-fit: cover;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: center;
+    background-color: var(--nav-text-color);
+    margin-right: .5rem;
+    margin-left: .5rem;
+}
+/******************/
 /* MAIN */
 main {
     flex-grow: 1;
@@ -112,15 +212,10 @@ main {
     object-fit: cover;
     object-position: center;
 }
-
-.card-title {
-    font-weight: bold;
-}
 /******************/
 /* Menù sottosezioni */
 .subsection-menu ul {
     display: flex;
-    list-style: none;
     gap: var(--standard-padding);
     justify-content: center;
 }
