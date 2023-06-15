@@ -47,6 +47,21 @@ main {
     flex-grow: 1;
     overflow: auto;
     background-color: lightseagreen;
+    display: flex;
+    flex-direction: column;
+}
+
+.static-bar {
+    flex-shrink: 0;
+    background-color: rgb(179, 103, 241);
+}
+
+.app-content-box {
+    flex-grow: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    background-color: rgb(231, 233, 130);
 }
 
 /*************************************************************/
