@@ -1,5 +1,58 @@
+:root {
+    --nav-text-color: #a3a3a3;
+    --light-color: #141922;
+    --dark-color: #080b12;
+    --bar-color: #282828;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+body > *, .global-container > * {
+    min-width: 100px;
+    min-height: 100px;
+    border: 2px dotted red;
+}
+
+/*************************************************************/
+/* BOX SUPERIORE */
+/*************************************************************/
+.global-container {
+    flex-grow: 1;
+    overflow: auto;
+    display: flex;
+    background-color: lightblue;
+}
+
+/* NAV */
+nav {
+    width: 200px;
+    overflow: auto;
+    flex-shrink: 0;
+    background-color: lightgoldenrodyellow;
+}
+
+/* MAIN */
+main {
+    flex-grow: 1;
+    overflow: auto;
+    background-color: lightseagreen;
+}
+
+/*************************************************************/
+/* BOX INFERIORE */
+/*************************************************************/
+.buttons-box {
+    flex-shrink: 0;
+    background-color: lightpink;
 }
