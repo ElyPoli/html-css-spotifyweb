@@ -23,6 +23,12 @@ body {
 section {
     display: flex;
     flex-direction: column;
+    padding-top: var(--standard-padding);
+    padding-bottom: var(--standard-padding);
+}
+
+main section:last-of-type {
+    padding-bottom: calc(var(--standard-padding) * 2);
 }
 
 /* Stili testo */
@@ -246,4 +252,107 @@ main {
 .buttons-box {
     flex-shrink: 0;
     background-color: lightpink;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.8rem;
+    /* gap: 5rem; */
 }
+/* Sezione brano in riproduzione */
+.now-play {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-basis: calc(100% / 3);
+}
+
+.now-play i {
+    padding: 0 .5rem;
+}
+
+.now-play-card {
+    display: flex;
+    align-items: center;
+    max-width: 50%;
+}
+
+.now-play-card img {
+    max-width: 25%;
+}
+
+.now-play-card h3, .now-play-card p {
+    padding-left: .8rem;
+}
+/******************/
+/* Sezione Pulsanti */
+.buttons-box-menu ul {
+    display: flex;
+    gap: var(--standard-padding);
+    justify-content: center;
+}
+
+.buttons-box-menu i {
+    color: #ffffff;
+    font-size: 1.5rem;
+    padding: 0 1rem;
+}
+
+.buttons-box-btn-section {
+    flex-grow: 2;
+}
+
+.time-play {
+    display: flex;
+    flex-direction: row;
+    padding-top: 1rem;
+    align-items: center;
+}
+
+.time-play > p {
+    padding: 0 1rem;
+}
+
+.time-play-line {
+    position: relative;
+    height: 3px;
+    width: 100%;
+    background-color: var(--nav-text-color);
+}
+
+.time-play-line::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #ffffff;
+    height: 3px;
+    width: 25%;
+    content: "";
+}
+/******************/
+/* Sezione Regolazioni */
+.regolations {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.regolations i {
+    padding: 0 1rem;
+}
+
+.regolations-line {
+    position: relative;
+    height: 3px;
+    width: 100%;
+    background-color: var(--nav-text-color);
+}
+
+/* .regolations-line::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #ffffff;
+    height: 3px;
+    width: 25%;
+    content: "";
+} */
+/******************/
