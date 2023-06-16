@@ -18,6 +18,9 @@
 
         <!-- Font -->
         <link href="https://fonts.cdnfonts.com/css/gotham" rel="stylesheet">
+
+        <!-- Icona Spotify -->
+        <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     </head>
     <body>
         <!-- Box superiore -->
@@ -25,43 +28,72 @@
             <!-- Menù di navigazione laterale -->
             <nav>
                 <!-- Parte superiore -->
-                <div>
+                <div class="nav-up-container">
                     <!-- Logo -->
                     <div class="nav-logo">
-                        <img src="img/aquietplace.jpeg" alt="">
-                        <h1>Lorem</h1>
+                        <img src="img/logo.svg" alt="Logo Spotify">
                     </div>
                     <!-- Menù di navigazione -->
                     <div class="nav-menu">
                         <ul>
-                            <li class="nav-menu-selected"><i class="fa-solid fa-house"></i><a href="#">Lorem</a></li>
-                            <li><i class="fa-solid fa-magnifying-glass"></i><a href="#">Lorem</a></li>
-                            <li><i class="fa-solid fa-lines-leaning fa-flip-horizontal"></i><a href="#">Lorem</a></li>
+                            <li class="nav-menu-selected">
+                                <i class="fa-solid fa-house"></i>
+                                <a href="#">Home</a>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <a href="#">Cerca</a>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-lines-leaning fa-flip-horizontal"></i>
+                                <a href="#">La tua libreria</a>
+                            </li>
                         </ul>
                     </div>
                     <!-- Menù playlist -->
-                    <div class="nav-menu">
-                        <h3>Lorem</h3>
-                        <ul>
-                            <li class="nav-menu-new-playlist"><i class="fa-solid fa-square-plus"></i><a href="#">Lorem</a></li>
-                            <li>Nome Playlist</li>
-                            <li>Nome Playlist</li>
-                            <li>Nome Playlist</li>
-                            <li>Nome Playlist</li>
-                            <li>Nome Playlist</li>
-                            <li>Nome Playlist</li>
-                            <li>Nome Playlist</li>
-                        </ul>
+                    <div class="nav-playlist-menu">
+                        <!-- Inserisci nuova playlist -->
+                        <div class="nav-menu nav-menu-up-container">
+                            <h3>Playlist</h3>
+                            <ul>
+                                <li class="nav-menu-new-playlist"><i class="fa-solid fa-square-plus"></i><a href="#">Crea Playlist</a></li>
+                            </ul>
+                        </div>
+                        <!-- Elenco playlist inserite che scorre -->
+                        <div class="nav-menu nav-menu-down-container">
+                            <ul>
+                                <li><a href="#">Nome Playlist</a></li>
+                                <li><a href="#">Nome Playlist</a></li>
+                                <li><a href="#">Nome Playlist</a></li>
+                                <li><a href="#">Nome Playlist</a></li>
+                                <li><a href="#">Nome Playlist</a></li>
+                                <li><a href="#">Nome Playlist</a></li>
+                                <li><a href="#">Nome Playlist</a></li>
+                                <li><a href="#">Nome Playlist</a></li>
+                                <li><a href="#">Nome Playlist</a></li>
+                                <li><a href="#">Nome Playlist</a></li>
+                                <li><a href="#">Nome Playlist</a></li>
+                                <li><a href="#">Nome Playlist</a></li>
+                                <li><a href="#">Nome Playlist</a></li>
+                                <li><a href="#">Nome Playlist</a></li>
+                                <li><a href="#">Nome Playlist</a></li>
+                                <li><a href="#">Nome Playlist</a></li>
+                                <li><a href="#">Nome Playlist</a></li>
+                                <li><a href="#">Nome Playlist</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Parte inferiore -->
-                <div class="nav-menu profile-box">
-                    <p><i class="fa-regular fa-circle-down"></i>Installa app</p>
-                    <div>
-                        <img src="img/profile.svg" alt="Profilo">
-                        <h3>John Doe</h3>
-                    </div>
+                <div class="nav-down-container">
+                    <div class="nav-menu profile-box">
+                        <p><i class="fa-regular fa-circle-down"></i>Installa app</p>
+                        <div>
+                            <img src="img/profile.svg" alt="Profilo">
+                            <h3>John Doe</h3>
+                        </div>
+                    </div>    
                 </div>
             </nav>
 
