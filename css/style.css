@@ -18,6 +18,7 @@ body {
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    font-family: 'Gotham', sans-serif;
 }
 
 section {
@@ -32,8 +33,29 @@ main section:last-of-type {
 }
 
 /* Stili testo */
+h1 {
+    color: #ffffff;
+}
+
+h2 {
+    padding-bottom: 1.5rem;
+    color: #ffffff;
+}
+
+h3 {
+    padding: .5rem 0;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+p {
+    color: #ffffff;
+}
+
 .subtitle {
     color: var(--nav-text-color);
+    text-align: left;
+    padding-bottom: 1.5rem;
 }
 
 i {
@@ -176,14 +198,17 @@ nav {
 main {
     flex-grow: 1;
     overflow: auto;
-    background-color: lightseagreen;
     display: flex;
     flex-direction: column;
 }
 
+main h3 {
+    text-align: center;
+}
+
 .static-bar {
     flex-shrink: 0;
-    background-color: rgb(179, 103, 241);
+    background-color: var(--dark-color);
     display: flex;
     justify-content: flex-end;
 }
@@ -192,24 +217,29 @@ main {
     flex-grow: 1;
     overflow-y: auto;
     overflow-x: hidden;
-    background-color: rgb(231, 233, 130);
+    background-color: var(--light-color);
+    padding: 0 1rem;
 }
 
 /* Sezioni con Card */
 .cards-box {
     display: flex;
-    flex-flow: row wrap;
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: var(--standard-padding);
 }
 
 .card {
-    background-color: lightseagreen;
-    max-width: calc(100% / 6 - 15px);
+    flex-basis: calc(100% / 6 - 15px * 2);
 }
 
 .card img {
     max-width: 100%;
     object-fit: cover;
+}
+
+.card > .subtitle {
+    text-align: center;
 }
 
 .card-round img {
@@ -220,10 +250,26 @@ main {
 }
 /******************/
 /* Menù sottosezioni */
+.subsection-menu {
+    padding: 1rem 0;
+
+    display: flex;
+    justify-content: center;
+}
+
 .subsection-menu ul {
     display: flex;
-    gap: var(--standard-padding);
+    flex-wrap: wrap;
+    gap: .5rem;
     justify-content: center;
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.7rem;
+}
+
+.subsection-menu > ul > li {
+    /* flex-basis: calc(100% / 6 - .2rem * 2); */
+    white-space: nowrap;
 }
 
 .subsection-menu a {
@@ -236,7 +282,7 @@ main {
 
 .subsection-menu > ul > li:first-of-type::after {
     position: absolute;
-    bottom: -2px;
+    bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     background-color: var(--line-nav-color);
@@ -257,6 +303,7 @@ main {
     padding: 0.8rem;
     /* gap: 5rem; */
 }
+
 /* Sezione brano in riproduzione */
 .now-play {
     display: flex;
@@ -272,15 +319,17 @@ main {
 .now-play-card {
     display: flex;
     align-items: center;
-    max-width: 50%;
+    flex-basis: 50%;
+    justify-content: center;
 }
 
 .now-play-card img {
     max-width: 25%;
+    object-fit: cover;
 }
 
 .now-play-card h3, .now-play-card p {
-    padding-left: .8rem;
+    padding: 0 0 0 .8rem;
 }
 /******************/
 /* Sezione Pulsanti */
