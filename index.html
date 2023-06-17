@@ -24,45 +24,46 @@
     </head>
     <body>
         <!-- Box superiore -->
-        <div class="global-container">
+        <div class="flex flex-grow1 overflow-auto">
             <!-- Menù di navigazione laterale -->
-            <nav>
+            <nav class="flex flex-column overflow-hidden">
                 <!-- Parte superiore -->
-                <div class="nav-up-container">
+                <div class="flex flex-column flex-grow1 overflow-hidden">
                     <!-- Logo -->
                     <div class="nav-logo">
                         <img src="img/logo.svg" alt="Logo Spotify">
+                        <img src="img/logo-small.svg" alt="Logo Spotify">
                     </div>
                     <!-- Menù di navigazione -->
                     <div class="nav-menu">
-                        <ul>
-                            <li class="nav-menu-selected">
-                                <i class="fa-solid fa-house"></i>
-                                <a href="#">Home</a>
+                        <ul class="nav-menu-list">
+                            <li class="nav-selected">
+                                <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M448 463.746h-149.333v-149.333h-85.334v149.333h-149.333v-315.428l192-111.746 192 110.984v316.19z" fill="#ffffff" /></svg>
+                                <span><a href="#">Home</a></span>
                             </li>
                             <li>
-                                <i class="fa-solid fa-magnifying-glass"></i>
-                                <a href="#">Cerca</a>
+                                <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M349.714 347.937l93.714 109.969-16.254 13.969-93.969-109.969q-48.508 36.825-109.207 36.825-36.826 0-70.476-14.349t-57.905-38.603-38.603-57.905-14.349-70.476 14.349-70.476 38.603-57.905 57.905-38.603 70.476-14.349 70.476 14.349 57.905 38.603 38.603 57.905 14.349 70.476q0 37.841-14.73 71.619t-40.889 58.921zM224 377.397q43.428 0 80.254-21.461t58.286-58.286 21.461-80.254-21.461-80.254-58.286-58.285-80.254-21.46-80.254 21.46-58.285 58.285-21.46 80.254 21.46 80.254 58.285 58.286 80.254 21.461z" fill="#ffffff" fill-rule="evenodd" /></svg>
+                                <span><a href="#">Cerca</a></span>
                             </li>
                             <li>
-                                <i class="fa-solid fa-lines-leaning fa-flip-horizontal"></i>
-                                <a href="#">La tua libreria</a>
+                                <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M291.301 81.778l166.349 373.587-19.301 8.635-166.349-373.587zM64 463.746v-384h21.334v384h-21.334zM192 463.746v-384h21.334v384h-21.334z" fill="#ffffff"/></svg>
+                                <span><a href="#">La tua libreria</a></span>
                             </li>
                         </ul>
                     </div>
                     <!-- Menù playlist -->
-                    <div class="nav-playlist-menu">
+                    <div class="flex flex-column overflow-hidden">
                         <!-- Inserisci nuova playlist -->
-                        <div class="nav-menu nav-menu-up-container">
+                        <div class="nav-menu nav-playlist flex-shrink">
                             <h3>Playlist</h3>
                             <ul>
                                 <li class="nav-menu-new-playlist"><i class="fa-solid fa-square-plus"></i><a href="#">Crea Playlist</a></li>
                             </ul>
                         </div>
                         <!-- Elenco playlist inserite che scorre -->
-                        <div class="nav-menu nav-menu-down-container">
+                        <div class="nav-menu flex flex-column overflow-auto flex-grow1 nav-playlist-list">
                             <ul>
-                                <li><a href="#">Nome Playlist</a></li>
+                                <li class="nav-selected"><a href="#">Nome Playlist</a></li>
                                 <li><a href="#">Nome Playlist</a></li>
                                 <li><a href="#">Nome Playlist</a></li>
                                 <li><a href="#">Nome Playlist</a></li>
@@ -86,10 +87,13 @@
                 </div>
 
                 <!-- Parte inferiore -->
-                <div class="nav-down-container">
+                <div class="flex-shrink">
                     <div class="nav-menu profile-box">
-                        <p><i class="fa-regular fa-circle-down"></i>Installa app</p>
-                        <div>
+                        <div class="profile-box-install">
+                            <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Download icon</title><path d="M12 11.657V6h-1v5.65L9.076 9.414l-.758.65 3.183 3.702 3.195-3.7-.758-.653L12 11.657zM11.5 2C7.358 2 4 5.358 4 9.5c0 4.142 3.358 7.5 7.5 7.5 4.142 0 7.5-3.358 7.5-7.5C19 5.358 15.642 2 11.5 2zm0 14C7.916 16 5 13.084 5 9.5S7.916 3 11.5 3 18 5.916 18 9.5 15.084 16 11.5 16z" fill="#ffffff" fill-rule="evenodd"/></svg>
+                            <span>Installa app</span>
+                        </div>
+                        <div class="profile-box-user">
                             <img src="img/profile.svg" alt="Profilo">
                             <h3>John Doe</h3>
                         </div>
@@ -98,16 +102,16 @@
             </nav>
 
             <!-- Box con il contenuto principale dell'app -->
-            <main>
+            <main class="flex flex-column flex-grow1 overflow-auto">
                 <!-- Barra statica superiore -->
-                <div class="static-bar">
+                <div class="flex flex-shrink static-bar">
                     <button class="btn">Effettua l'upgrade</button>
                 </div>
 
                 <!-- Box con il contenuto dell'app -->
-                <div class="app-content-box">
+                <div class="flex-grow1 app-content-box">
                     <!-- Menù sottosezioni -->
-                    <div class="subsection-menu">
+                    <div class="flex flex-justify-center subsection-menu">
 
 
                                 <!-- <div tabindex="0" class="cat">IN EVIDENZA</div>
@@ -226,10 +230,10 @@
         </div>
 
         <!-- Box inferriore con pulsanti -->
-        <div class="buttons-box">
+        <div class="flex flex-shrink buttons-box">
             <!-- Sezione brano in riproduzione -->
-            <div class="now-play">
-                <div class="now-play-card">
+            <div class="flex flex-align-center now-play">
+                <div class="flex flex-align-center flex-justify-center now-play-card">
                     <img src="img/aquietplace.jpeg" alt="">
                     <div>
                         <h3>Sinister</h3>
@@ -256,7 +260,7 @@
                 </div>
 
                 <!-- Tempo riproduzione -->
-                <div class="time-play">
+                <div class="flex flex-align-center time-play">
                     <p>0:25</p>
                     <div class="time-play-line"></div>
                     <p>4:35</p>
@@ -264,7 +268,7 @@
             </div>
 
             <!-- Regolazioni -->
-            <div class="regolations" style="background-color: rgb(212, 162, 121); min-height: 10px; min-width: 10px;">
+            <div class="flex flex-align-center regolations" style="background-color: rgb(212, 162, 121); min-height: 10px; min-width: 10px;">
                 <i class="fa-solid fa-list"></i>
                 <i class="fa-solid fa-desktop"></i>
                 <i class="fa-solid fa-volume-high"></i>

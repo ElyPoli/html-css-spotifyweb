@@ -45,5 +45,31 @@
 
 /* Mobile */
 @media screen and (max-width: 600px) {
+    nav {
+        flex-shrink: 1;
+        min-width: 60px;
+        align-items: center;
+        padding-right: .5rem;
+    }
+    
+    .nav-logo img:last-of-type {
+        display: inline-block;
+    }
 
+    .nav-logo img:first-of-type, nav h3, .nav-menu span, .nav-playlist-list, .profile-box-install::after, .nav-playlist > ul {
+        display: none;
+    }
+    
+    .profile-box-user img {
+        width: 1.5rem;
+    }
+
+    .profile-box-user {
+        padding-left: .1rem;
+    }
+
+    .nav-selected::after {
+        left: -.9rem;
+    }
+    
 }
