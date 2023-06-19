@@ -49,6 +49,10 @@ main section:last-of-type {
     flex-direction: column;
 }
 
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
 .overflow-hidden {
     overflow: hidden;
 }
@@ -63,6 +67,14 @@ main section:last-of-type {
 
 .flex-shrink {
     flex-shrink: 0;
+}
+
+.flex-justify-start {
+    justify-content: flex-start;
+}
+
+.flex-justify-end {
+    justify-content: flex-end;
 }
 
 /* Stili testo */
@@ -408,7 +420,6 @@ main h3 {
     object-fit: cover;
     border-radius: 50%;
     aspect-ratio: 1/1;
-    object-fit: cover;
     object-position: center;
 }
 
@@ -447,69 +458,83 @@ main h3 {
 /*************************************************************/
 /* BOX INFERIORE */
 /*************************************************************/
-.buttons-box {
-    background-color: lightpink;
+.footer-box {
+    background-color: var(--bar-color);
     justify-content: space-between;
-    padding: 0.8rem;
-    /* gap: 5rem; */
+    padding: 1.5rem 0.8rem;
 }
 
-/* Sezione brano in riproduzione */
-.now-play {
-    justify-content: flex-start;
-    flex-basis: calc(100% / 3);
+.footer-section {
+    flex-basis: calc(100% / 3 - 2rem * 2);
+    gap: 2rem;
 }
 
-.now-play i {
+.footer-section i {
     padding: 0 .5rem;
 }
 
-.now-play-card {
-    flex-basis: 50%;
+/* Sezione brano in riproduzione */
+.footer-section-now-play {
+    flex-basis: calc(100% / 2);
 }
 
-.now-play-card img {
-    max-width: 25%;
+.footer-section-now-play > div:first-of-type {
+    max-width: 80px;
+    min-width: 40px;
+}
+
+.footer-section-now-play img {
+    max-width: 100%;
     object-fit: cover;
 }
 
-.now-play-card h3, .now-play-card p {
+.footer-section-now-play h3, .footer-section-now-play p {
     padding: 0 0 0 .8rem;
+    white-space: nowrap;
+}
+
+.footer-section-now-play p:hover {
+    text-decoration: underline;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.footer-section-now-play i:hover {
+    color: #ffffff;
 }
 /******************/
 /* Sezione Pulsanti */
-.buttons-box-btn-section {
-    flex-grow: 2;
-}
-
-.buttons-box-menu ul {
-    display: flex;
-    gap: var(--standard-padding);
-    justify-content: center;
-}
-
-.buttons-box-menu i {
+.footer-section-menu i {
     color: #ffffff;
     font-size: 1.5rem;
     padding: 0 1rem;
 }
 
-.time-play {
+.footer-section-menu i:hover {
+    cursor: pointer;
+}
+
+.footer-section-menu-play:hover {
+    transform: scale(1.5, 1.5);
+}
+
+.footer-time-play {
     padding-top: 1rem;
 }
 
-.time-play > p {
+.footer-time-play > p {
     padding: 0 1rem;
 }
 
-.time-play-line {
+.footer-time-play-line {
     position: relative;
     height: 3px;
     width: 100%;
     background-color: var(--nav-text-color);
+    border-radius: 5px;
 }
 
-.time-play-line::after {
+.footer-time-play-line::after {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -518,26 +543,34 @@ main h3 {
     width: 25%;
     content: "";
 }
+
+.footer-time-play-line:hover::after {
+    background-color: var(--line-nav-color);
+    cursor: pointer;
+}
+
 /******************/
 /* Sezione Regolazioni */
-.regolations i {
-    padding: 0 1rem;
-}
-
-.regolations-line {
+.footer-regolations-line {
     position: relative;
     height: 3px;
-    width: 100%;
+    width: 100px;
     background-color: var(--nav-text-color);
+    border-radius: 5px;
 }
 
-/* .regolations-line::after {
+.footer-regolations-line::after {
     position: absolute;
     bottom: 0;
     left: 0;
     background-color: #ffffff;
     height: 3px;
-    width: 25%;
+    width: 20px;
     content: "";
-} */
+}
+
+.footer-regolations-line:hover::after {
+    background-color: var(--line-nav-color);
+    cursor: pointer;
+}
 /******************/

@@ -251,49 +251,48 @@
         </div>
 
         <!-- Box inferriore con pulsanti -->
-        <div class="flex flex-shrink buttons-box">
+        <div class="flex flex-shrink footer-box">
             <!-- Sezione brano in riproduzione -->
-            <div class="flex flex-align-center now-play">
-                <div class="flex flex-align-center flex-justify-center now-play-card">
-                    <img src="img/aquietplace.jpeg" alt="">
+            <div class="flex flex-align-center flex-justify-start footer-section">
+                <div class="flex flex-align-center footer-section-now-play">
                     <div>
+                        <img src="img/sinister.jpeg" alt="Sinister">
+                    </div>
+                    <div class="flex-grow1">
                         <h3>Sinister</h3>
                         <p class="subtitle">Brano Nome</p>    
                     </div>
                 </div>
-                <div>
+                <div class="flex flex-align-center flex-wrap footer-section-now-play">
                     <i class="fa-regular fa-heart"></i>
                     <i class="fa-regular fa-folder"></i>
                 </div>
             </div>
 
             <!-- Pulsanti -->
-            <div class="buttons-box-btn-section">
+            <div class="footer-section">
                 <!-- Menù pulsanti -->
-                <div class="buttons-box-menu">
-                    <ul>
-                        <li><i class="fa-solid fa-shuffle"></i></li>
-                        <li><i class="fa-solid fa-backward-step"></i></li>
-                        <li><i class="fa-regular fa-circle-play"></i></li>
-                        <li><i class="fa-solid fa-forward-step"></i></li>
-                        <li><i class="fa-solid fa-rotate-right"></i></li>
-                    </ul>
-                </div>
-
+                <ul class="flex flex-justify-center footer-section-menu">
+                    <li><i class="fa-solid fa-shuffle"></i></li>
+                    <li><i class="fa-solid fa-backward-step"></i></li>
+                    <li><i class="fa-regular fa-circle-play footer-section-menu-play"></i></li>
+                    <li><i class="fa-solid fa-forward-step"></i></li>
+                    <li><i class="fa-solid fa-rotate-right"></i></li>
+                </ul>
                 <!-- Tempo riproduzione -->
-                <div class="flex flex-align-center time-play">
+                <div class="flex flex-align-center footer-time-play">
                     <p>0:25</p>
-                    <div class="time-play-line"></div>
+                    <div class="footer-time-play-line"></div>
                     <p>4:35</p>
                 </div>
             </div>
 
             <!-- Regolazioni -->
-            <div class="flex flex-align-center regolations" style="background-color: rgb(212, 162, 121); min-height: 10px; min-width: 10px;">
+            <div class="flex flex-align-center flex-justify-end footer-section">
                 <i class="fa-solid fa-list"></i>
                 <i class="fa-solid fa-desktop"></i>
                 <i class="fa-solid fa-volume-high"></i>
-                <div class="regolations-line"></div>
+                <div class="footer-regolations-line"></div>
             </div>
         </div>
     </body>

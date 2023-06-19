@@ -5,12 +5,35 @@
     .card {
         flex-basis: calc(100% / 4 - 15px * 2);
     }
+
+    .footer-box {
+        padding: 1.5rem 0.5rem;
+    }  
+
+    .footer-section {
+        flex-basis: calc(100% / 3 - .5rem * 2);
+        gap: .5rem;
+    }
+    
+    .footer-section i {
+        padding: 0 .3rem;
+    }
+
+    .footer-section-menu i {
+        color: #ffffff;
+        font-size: 1rem;
+        padding: 0 .5rem;
+    }
 }
 
 /* Tablet */
 @media screen and (max-width: 700px) {
     .card {
         flex-basis: calc(100% / 2 - 15px * 2);
+    }
+
+    .footer-section-now-play i {
+        padding-top: .3rem;
     }
 }
 
@@ -41,5 +64,25 @@
 
     .nav-selected::after {
         left: -.9rem;
+    }
+
+    .footer-section-now-play p {
+        white-space: wrap;
+    }
+
+    .footer-section i {
+        padding: 0 .2rem;
+    }
+
+    .footer-section h3 {
+        font-size: .9rem;
+    }
+
+    .footer-section p {
+        font-size: .7rem;
+    }
+
+    .footer-section > i, .footer-section-now-play > i {
+        font-size: .7rem;
     }
 }
