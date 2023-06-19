@@ -353,15 +353,15 @@ main h3 {
 .subsection-menu ul {
     display: flex;
     flex-wrap: wrap;
-    gap: .5rem;
+    column-gap: 4.5rem;
+    row-gap: 2rem;
     justify-content: center;
     text-align: center;
     font-weight: bold;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
 }
 
 .subsection-menu > ul > li {
-    /* flex-basis: calc(100% / 6 - .2rem * 2); */
     white-space: nowrap;
 }
 
@@ -375,7 +375,7 @@ main h3 {
 
 .subsection-menu > ul > li:first-of-type::after {
     position: absolute;
-    bottom: 0;
+    bottom: -10px;
     left: 50%;
     transform: translateX(-50%);
     background-color: var(--line-nav-color);
@@ -404,6 +404,8 @@ main h3 {
 }
 
 .card-round img {
+    max-width: 100%;
+    object-fit: cover;
     border-radius: 50%;
     aspect-ratio: 1/1;
     object-fit: cover;

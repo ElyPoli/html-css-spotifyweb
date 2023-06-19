@@ -5,35 +5,6 @@
     .card {
         flex-basis: calc(100% / 4 - 15px * 2);
     }
-
-    .subsection-menu > ul > li {
-        /* padding: 0; */
-        /* flex-basis: calc(100% / 5 - 32px - 20px); */
-        /* white-space: nowrap; */
-
-        /* flex-basis: calc(100% / 5 - .2rem * 2); */
-
-        /* gap: .2rem; */
-        
-    }
-
-    .subsection-menu ul {
-        /* gap: 10px; */
-        /* gap: .2rem; */
-
-        max-width: 50%;
-    }
-
-    /* .subsection-menu > ul > li:last-of-type {
-        flex-grow: 2;
-    } */
-    
-
-    /* TEST */
-    /* .subsection-menu > div {
-        flex-basis: calc(100% / 10 - var(--standard-padding) * 2);
-    } */
-
 }
 
 /* Tablet */
@@ -71,5 +42,4 @@
     .nav-selected::after {
         left: -.9rem;
     }
-    
 }
