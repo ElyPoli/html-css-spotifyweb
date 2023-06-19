@@ -389,13 +389,12 @@ main h3 {
     flex-basis: calc(100% / 6 - 15px * 2);
 }
 
-.card img {
-    max-width: 100%;
-    object-fit: cover;
-}
-
 .card > .subtitle {
     text-align: center;
+}
+
+.card > .subtitle,  .card > h3 {
+    cursor: pointer;
 }
 
 .card-round img {
@@ -403,6 +402,37 @@ main h3 {
     aspect-ratio: 1/1;
     object-fit: cover;
     object-position: center;
+}
+
+.card-img {
+    position: relative;
+}
+
+.card-img img {
+    max-width: 100%;
+    object-fit: cover;
+    background-color: rgba(0, 0, 0, 0.341);
+}
+
+.card-img-hover {
+    display: none;
+}
+
+.card-img:hover .card-img-hover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.664);
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+}
+
+.card-img-hover > i {
+    font-size: 4rem;
+    color: #ffffff;
 }
 /******************/
 
