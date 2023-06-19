@@ -330,6 +330,12 @@ main h3 {
 .static-bar {
     background-color: var(--dark-color);
     justify-content: flex-end;
+    padding-right: .5rem;
+}
+
+.static-bar > button:hover {
+    cursor: pointer;
+    transform: scale(1.1, 1.1);
 }
 
 .app-content-box {
